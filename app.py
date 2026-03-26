@@ -1,14 +1,12 @@
 import streamlit as st
 from model import detect_emotion
 
-# page config
 st.set_page_config(
     page_title="Emotion Analyzer",
     page_icon="🧠",
     layout="centered"
 )
 
-# custom styling
 st.markdown("""
     <style>
     .main {
@@ -32,14 +30,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# title
 st.title("🧠 Emotion-Aware Text Analyzer")
 st.caption("Detect emotions using Deep Learning (Transformer Model)")
 
-# input box
 text = st.text_area("Enter your text here", height=150)
 
-# button
 if st.button("Analyze Emotion"):
 
     if text.strip() == "":
